@@ -20,7 +20,7 @@ import os
 import sys
 
 reconPath = "/usr/share/recon-ng/"
-altDnsPath = "/root/Desktop/altdns-master/"
+altDnsPath = "/root/altdns/"
 
 sys.path.insert(0,reconPath)
 from recon.core import base
