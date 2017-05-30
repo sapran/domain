@@ -19,7 +19,7 @@ import time
 import os
 import sys
 
-reconPath = "/usr/share/recon-ng/"
+reconPath = "/root/recon-ng/"
 altDnsPath = "/root/altdns/"
 
 sys.path.insert(0,reconPath)
@@ -42,7 +42,7 @@ def run_recon(domains, bruteforce):
 	reconb = base.Recon(base.Mode.CLI)
 	reconb.init_workspace(wspace)
 	reconb.onecmd("TIMEOUT=100")
-	module_list = ["recon/domains-hosts/bing_domain_web", "recon/domains-hosts/google_site_web", "recon/domains-hosts/netcraft", "recon/domains-hosts/shodan_hostname", "recon/netblocks-companies/whois_orgs", "recon/hosts-hosts/resolve"]
+	module_list = ["recon/domains-hosts/bing_domain_web", "recon/domains-hosts/google_site_web", "recon/domains-hosts/netcraft", "recon/domains-hosts/shodan_hostname", "recon/netblocks-companies/whois_orgs", "recon/hosts-hosts/resolve", "recon/domains-hosts/passivetotal_subdomains"]
 	
 	for domain in domains:
 		for module in module_list:
